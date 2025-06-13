@@ -1,0 +1,124 @@
+{
+  "start_room": "jungle_clearing",
+  "rooms": {
+    "jungle_clearing": {
+      "name": "Jungle Clearing",
+      "description": "You stand in a humid jungle clearing. A dense canopy of trees surrounds you, and the air is thick with the scent of exotic flowers. To the east, you see a faint outline of what appears to be an ancient stone structure, partially overgrown with vines.",
+      "exits": {
+        "east": "temple_entrance"
+      },
+      "items": []
+    },
+    "temple_entrance": {
+      "name": "Temple Entrance",
+      "description": "You are at the entrance of a massive stone temple. Hieroglyphs cover the weathered walls, depicting ancient rituals. A grand archway leads further inside to the west.",
+      "exits": {
+        "west": "jungle_clearing",
+        "north": "grand_foyer"
+      },
+      "items": []
+    },
+    "grand_foyer": {
+      "name": "Grand Foyer",
+      "description": "The grand foyer is a vast chamber with a high, vaulted ceiling. Pillars carved with intricate designs support the structure. Passages lead to the north, east, and south.",
+      "exits": {
+        "south": "temple_entrance",
+        "north": "hall_of_echoes",
+        "east": "chamber_of_reflections",
+        "west": "garden_of_stone"
+      },
+      "items": []
+    },
+    "hall_of_echoes": {
+      "name": "Hall of Echoes",
+      "description": "A long, narrow hall where every sound reverberates. Faint carvings on the walls depict ancient scholars. There's a passage to the south and a heavy, ornate door to the east.",
+      "exits": {
+        "south": "grand_foyer",
+        "east": "archive_of_whispers"
+      },
+      "items": []
+    },
+    "chamber_of_reflections": {
+      "name": "Chamber of Reflections",
+      "description": "This circular chamber has highly polished obsidian walls that reflect your image countless times. A pedestal in the center has a small indentation. There's a passage to the west.",
+      "exits": {
+        "west": "grand_foyer",
+        "north": "altar_of_the_sun"
+      },
+      "items": ["mirror"]
+    },
+    "garden_of_stone": {
+      "name": "Garden of Stone",
+      "description": "An eerie garden filled with petrified trees and statues of strange creatures. The air is still and heavy. A path leads east.",
+      "exits": {
+        "east": "grand_foyer",
+        "north": "statue_of_the_serpent"
+      },
+      "items": ["ancient_coin"]
+    },
+    "archive_of_whispers": {
+      "name": "Archive of Whispers",
+      "description": "Dusty shelves filled with ancient scrolls and crumbling texts line this room. A large stone sphinx statue sits in the center, its eyes seemingly following you. There's a passage to the west.",
+      "exits": {
+        "west": "hall_of_echoes",
+        "north": "altar_of_the_sun"
+      },
+      "items": [],
+      "puzzle": {
+        "type": "riddle",
+        "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+        "answer": "echo",
+        "reward_item": "archive_key",
+        "solved": false
+      }
+    },
+    "statue_of_the_serpent": {
+      "name": "Statue of the Serpent",
+      "description": "A colossal statue of a coiled serpent dominates this chamber. Its eyes glow faintly. There's a passage to the south and a hidden passage to the east, behind the statue.",
+      "exits": {
+        "south": "garden_of_stone",
+        "east": "altar_of_the_sun"
+      },
+      "items": []
+    },
+    "altar_of_the_sun": {
+      "name": "Altar of the Sun",
+      "description": "This sacred chamber is bathed in a soft, golden light. A large altar stands in the center, with an empty pedestal. The air hums with ancient energy. Passages lead south and west.",
+      "exits": {
+        "south": "chamber_of_reflections",
+        "west": "archive_of_whispers",
+        "east": "statue_of_the_serpent"
+      },
+      "items": [],
+      "locked": true,
+      "unlock_item": "archive_key",
+      "final_puzzle": {
+        "type": "item_placement",
+        "item_needed": "sunstone",
+        "win_message": "As you place the Sunstone on the altar, a blinding light erupts, filling the chamber. The temple trembles, and a voice echoes, 'The ancient power is restored! You have completed your quest!' Congratulations, you have won the game!"
+      }
+    }
+  },
+  "items": {
+    "key": {
+      "name": "a small brass key",
+      "description": "It's a small, ornate brass key. It looks like it might unlock a chest."
+    },
+    "mirror": {
+      "name": "a polished obsidian mirror",
+      "description": "A perfectly smooth, reflective obsidian mirror. It seems to hum with a faint energy."
+    },
+    "ancient_coin": {
+      "name": "an ancient coin",
+      "description": "A heavy, tarnished coin with an unfamiliar symbol. It might be valuable."
+    },
+    "archive_key": {
+      "name": "a skeletal key",
+      "description": "A strange, skeletal key. It looks like it could unlock a very old door."
+    },
+    "sunstone": {
+      "name": "the legendary Sunstone",
+      "description": "A radiant crystal that pulses with warm light. This is the artifact you've been searching for!"
+    }
+  }
+}
