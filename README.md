@@ -92,4 +92,4 @@ Game saved to progress.json
 
 ## License
 
-PolyForm Noncommercial License 1.0.0. Copyright (c) 2026 Kitsune Technologies LLC. Free for any noncommercial purpose (personal use, research, hobby projects, education). See `LICENSE.md` for the full text.
+MIT. See [LICENSE.md](LICENSE.md).
